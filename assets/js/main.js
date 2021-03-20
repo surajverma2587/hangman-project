@@ -2,6 +2,21 @@ const startButtonElement = document.getElementById("start-btn");
 const startGameDiv = document.getElementById("start-game");
 const bodyElement = document.body;
 
+const gameWord = "hello";
+
+const constructLetterBoxes = () => {
+  // spread operator
+  const wordsArray = [...gameWord];
+
+  const constructLetterBox = (letter) => {
+    const letterDivElement = document.createElement("div");
+    letterDivElement.setAttribute("class", "word-item");
+    return letterDivElement;
+  };
+
+  return wordsArray.map(constructLetterBox);
+};
+
 const constructGameContainer = () => {
   const gameContainerDiv = document.createElement("div");
   gameContainerDiv.setAttribute("class", "game-container");
@@ -10,7 +25,9 @@ const constructGameContainer = () => {
   wordsContainerDiv.setAttribute("class", "words-container");
 
   // TODO: replace this with the acutal word blanks
-  wordsContainerDiv.textContent = "_ _ _ _ _";
+  const wordDivs = constructLetterBoxes();
+
+  wordsContainerDiv.append(...wordDivs);
 
   gameContainerDiv.appendChild(wordsContainerDiv);
 
