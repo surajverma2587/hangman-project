@@ -1,0 +1,9 @@
+.header h1 {
+  text-align: center;
+  margin: 40px 0px;
+}
+.header-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
