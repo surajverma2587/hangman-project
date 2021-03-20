@@ -7,3 +7,28 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
+.start-game {
+  position: relative;
+  margin-top: 40px;
+  height: 400px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.btn-controls {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.start-btn {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  border: none;
+}
